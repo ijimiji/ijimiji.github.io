@@ -13,8 +13,14 @@
     --purple: #B48EAD;
 }
 
-html, body {
-    font-family: 'Roboto Condensed', 'Courier New', Courier, monospace;
+@font-face {
+    font-family: "Iosevka";
+    src: url("./iosevka.ttf");
+}
+
+html,
+body {
+    font-family: 'Iosevka', 'Roboto Condensed', 'Courier New', Courier, monospace;
     background-color: var(--black);
     padding: 0px;
     margin: 0px;
@@ -44,6 +50,7 @@ html, body {
     color: var(--black);
 
 }
+
 .orange-bg {
     background-color: var(--orange);
 }
@@ -100,18 +107,43 @@ html, body {
     text-align: center;
 }
 
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+a:hover, .fa:hover {
+    transform: scale(1.1);
+}
+
+.spin:hover {
+    animation: rotate 1.0s infinite linear;
+}
+
+.vert {
+    font-size: xx-small;
+    display: flex;
+    flex-direction: column;
+}
+
 .block {
-    margin-top: 0.4em;
-    margin-left: 0.4em;
-    margin-right: 0.4em;
-    margin-bottom: 0.2em;
+    margin: 1em;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
     border-left: solid 0.15em;
     color: var(--white);
     padding: 0.2em;
 }
+
 .major-title {
     font-size: large;
 }
+
 .minor-title {
     font-size: medium;
 }
@@ -122,15 +154,89 @@ html, body {
 }
 
 .footer {
+    font-size: xx-small;
     position: fixed;
     bottom: 0;
 }
 
-p, h1, h2 {
+a {
+    color: var(--black);
+}
+
+h1,
+h2 {
+    margin: 0px;
+}
+p {
     margin: 0px;
 }
 
 ul {
+    font-size: small;
     margin: 0px;
     padding-left: 1em;
+}
+
+details {
+    user-select: none;
+}
+
+details:not([open]) summary span.icon {
+    animation: size 0.5s infinite alternate linear, spin-backwards 0.5s;
+}
+
+details[open] summary span.icon {
+    animation: spin forwards 0.5s;
+}
+
+summary {
+    display: flex;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes spin-backwards {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes size {
+    from {
+        transform: scale(1.0);
+    }
+
+    to {
+        transform: scale(0.90);
+    }
+}
+
+::-webkit-scrollbar {
+    position: fixed;
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    position: fixed;
+    background: var(--light-grey);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--grey);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-blue);
 }

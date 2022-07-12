@@ -1,65 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ijimiji</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed">
+    <script>
+        function scrollToBottom() {
+            setTimeout(() => window.scrollTo({left: 0, top: document.body.scrollHeight,  behavior: 'smooth'}), 10);
+        }
+        window.history.scrollRestoration = 'manual'
+    </script>
 </head>
+
 <body>
     <div style="flex-direction: row; display: flex;">
-        <div class="centered dense red-bg black-fg">
-            <p>Hello, World!</p> 
+        <div class="centered dense red-bg black-fg vert">
+            <i class="fa fa-envelope"></i>
+            <a href=""><b>mrojahor@gmail.com</b></a>
         </div>
-        <div class="centered dense yellow-bg black-fg">
-            <p>Hello, World!</p> 
+        <div class="centered dense yellow-bg black-fg vert">
+            <a href="https://github.com/ijimiji">
+                <i class="fa fa-github spin"></i>
+            </a>
+            <a href="https://github.com/ijimiji"><b>ijimiji</b></a>
         </div>
-        <div class="centered dense green-bg black-fg">
-            <p>Hello, World!</p> 
+        <div class="centered dense green-bg black-fg vert">
+            <a href="https://www.linkedin.com/in/egor-laryn-92341a218">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/egor-laryn-92341a218"><b>Egor Laryn</b></a>
         </div>
-        <div class="centered dense blue-bg black-fg">
-            <p>Hello, World!</p> 
-        </div>
-    </div>
-    <div class="block" style="border-color: var(--yellow); background-color: var(--grey);">
-        <div class="major-title">Python</div>
-        <div class="block" style="border-color: var(--red); background-color: var(--light-grey);">
-            <ul>
-                <li><div class="highlight">Django</div>.</li>
-                <li><div class="highlight">Poetry</div>.</li>
-            </ul>
-        </div>
-    </div>
-    <div class="block" style="border-color: var(--yellow); background-color: var(--grey);">
-        <div class="major-title">JavaScript</div>
-        <div class="block" style="border-color: var(--green); background-color: var(--light-grey);">
-            <ul>
-                <li><div class="highlight">Svelte</div>.</li>
-                <li><div class="highlight">Vue</div>.</li>
-            </ul>
+        <div class="centered dense blue-bg black-fg vert">
+            <a href="https://t.me/ijimiji">
+                <i class="fa fa-telegram"></i>
+            </a>
+            <a href="https://t.me/ijimiji"><b>@ijimiji</b></a>
         </div>
     </div>
-    <div class="block" style="border-color: var(--yellow); background-color: var(--grey);">
-        <div class="major-title">Common</div>
-        <div class="block" style="border-color: var(--blue); background-color: var(--light-grey);">
-            <ul>
-                <li><div class="highlight">Git</div>.</li>
-                <li><div class="highlight">LaTeX</div> typesetting.</li>
-                <li><div class="highlight">Linux</div> extensive usage.</li>
-                <li><div class="highlight">Bash</div> scripting.</li>
-            </ul>
-        </div>
+    <div onclick="scrollToBottom()">
+        <details class="block" style="border-color: var(--red); background-color: var(--grey);">
+            <summary>
+                <span class="icon">🙃</span>
+                About me
+            </summary>
+            <div class="content">
+                <details class="block" style="border-color: var(--red); background-color: var(--light-grey);" open>
+                    <summary>
+                        🎯Objective
+                    </summary>
+                    <ul>
+                        <li>I'm enthusiastic software developer who likes tinkering with things and learning new stuff.
+                        </li>
+                        <li>I like teaching the others and I feel like I should share every gem of knowledge I have,
+                            even though I've just started my journey.</li>
+                        <li>Open-source software is my greatest passion and I'd like to contribute to something whenever
+                            somebody finds me helpful.</li>
+                        <li>
+                            <div class="highlight">I'd like to get a beginner role of a software developer wherever I
+                                can get and share experience.</div>
+                        </li>
+                    </ul>
+                </details>
+                <details class="block" style="border-color: var(--red); background-color: var(--light-grey);" open>
+                    <summary>
+                        📚Education
+                    </summary>
+                    <ul>
+                        <li>
+                            <div class="highlight">BSU FAMCS Computer Science Bachelor</div> 2020 - present.
+                        </li>
+                    </ul>
+                </details>
+                <details class="block" style="border-color: var(--red); background-color: var(--light-grey);" open>
+                    <summary>
+                        🇬🇧English
+                    </summary>
+                    <ul>
+                        <li>I passed B1 <div class="highlight">PET</div> English exam back in the school days in 2017
+                            and since then I continued to master my speaking and writting skills.</li>
+                        <li>I took part in various essay contests and speaking competitions at university.</li>
+                        <li>Communicating with an international team would be a great pleasure and experience.</li>
+                    </ul>
+                </details>
+            </div>
+        </details>
+        <details class="block" style="border-color: var(--red); background-color: var(--grey);">
+            <summary>
+                <span class="icon">🔨</span>
+                Technical skills
+            </summary>
+            <div class="content">
+                <details class="block" style="border-color: var(--red); background-color: var(--light-grey);" open>
+                    <summary>
+                        🐍Python
+                    </summary>
+                    <ul>
+                        <li>
+                            <div class="highlight">Poetry</div> for dependency management.
+                        </li>
+                        <li>
+                            <div class="highlight">Celery</div> with <div class="highlight">RabbitMQ</div> for creating
+                            tasks.
+                        </li>
+                        <li>
+                            <div class="highlight">DRF</div>, <div class="highlight">Django</div> and <div
+                                class="highlight">FastAPI</div> for building web apps.
+                        </li>
+                        <li>Blazingly fast <div class="highlight">aiogram</div> for my Telegram bots.</li>
+                    </ul>
+                </details>
+                <details class="block" style="border-color: var(--red); background-color: var(--light-grey);" open>
+                    <summary>
+                        JavaScript
+                    </summary>
+                    <ul>
+                        <li>
+                            <div class="highlight">Express.js</div> powered by <div class="highlight">MongoDB</div> for
+                            building simple web applications.
+                        </li>
+                        <li>
+                            <div class="highlight">Vue</div> and <div class="highlight">Svelte</div> for creating
+                            reusable components.
+                        </li>
+                    </ul>
+                </details>
+                <details class="block" style="border-color: var(--red); background-color: var(--light-grey);" open>
+                    <summary>
+                        Common
+                    </summary>
+                    <ul>
+                        <li>
+                            <div class="highlight">C++</div> as a language of choice for competitive programming and
+                            <div class="highlight">Qt</div>.
+                        </li>
+                        <li>Basic <div class="highlight">Java</div> from <div class="highlight">Java Basics</div> course
+                            by <div class="highlight">EPAM</div>(2022).</li>
+                        <li>
+                            <div class="highlight">Git</div> for collaboration.
+                        </li>
+                        <li>
+                            <div class="highlight">LaTeX</div> typesetting.
+                        </li>
+                        <li>
+                            <div class="highlight">Docker</div> and <div class="highlight">Docker Compose</div> for
+                            creating reproducible environments.
+                        </li>
+                        <li>Extensive <div class="highlight">Linux</div> usage and <div class="highlight">Bash</div>
+                            scripting.</li>
+                    </ul>
+                </details>
+            </div>
+        </details>
+        <details class="block" style="border-color: var(--red); background-color: var(--grey);">
+            <summary>
+                <span class="icon">🚣</span>
+                Experience
+            </summary>
+            <div class="content">
+                <details class="block" style="border-color: var(--red); background-color: var(--light-grey);" open>
+                    <summary>
+                        2020
+                    </summary>
+                    <ul>
+                        <li>Writting a toy project with my groupmates during my university practice. The application
+                            consisted of <div class="highlight">Node.js</div> API powered by <div class="highlight">
+                                MongoDB</div> and deployed with <div class="highlight">Docker</div> in combination with
+                            a client written with <div class="highlight">Vue</div>.</li>
+                    </ul>
+                </details>
+                <details class="block" style="border-color: var(--red); background-color: var(--light-grey);" open>
+                    <summary>
+                        2021
+                    </summary>
+                    <ul>
+                        <li>
+                            <div class="highlight">EPAM Python</div> course which had been followed with writting RSS
+                            client with a <div class="highlight">Svelte</div> client.
+                        </li>
+                    </ul>
+                </details>
+                <details class="block" style="border-color: var(--red); background-color: var(--light-grey);" open>
+                    <summary>
+                        2022
+                    </summary>
+                    <ul>
+                        <li>My first commercial experience during internship in Innowise Group which involved
+                            maintaining <div class="highlight">DRF</div> API and <div class="highlight">React</div> web
+                            apps.</li>
+                    </ul>
+                </details>
+            </div>
+        </details>
     </div>
-    <div class="block" style="border-color: var(--yellow); background-color: var(--grey);">
-        <div class="major-title">English</div>
-        <div class="block" style="border-color: var(--purple); background-color: var(--light-grey);">
-            <ul>
-                <li><div class="highlight">B1 PET English Exam (2017)</div>.</li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer centered purple-bg black-fg dense">Minsk 2022</div>
+    <!-- <div class="footer centered purple-bg black-fg dense">Minsk 2022</div> -->
 </body>
+<script>
+    window.scrollTo(0, document.body.scrollHeight);
+</script>
+
 </html>
