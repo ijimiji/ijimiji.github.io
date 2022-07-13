@@ -27,6 +27,13 @@ body {
     font-size: calc(100% + 1vw + 1vh);
 }
 
+@media (max-width: 767px) {
+    body {
+        font-size: initial;
+    }
+}
+
+
 .red-bg {
     background-color: var(--red);
 }
