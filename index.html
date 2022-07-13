@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed">
     <script>
-        function scrollToBottom() {
-            setTimeout(() => window.scrollTo({left: 0, top: document.body.scrollHeight,  behavior: 'smooth'}), 10);
+        function scrollToBottom(id) {
+            let element = document.getElementById(id);
+            console.log(element);
+            setTimeout(() => window.scrollTo({left: 0, top: element.offsetTop - 20,  behavior: 'smooth'}), 10);
         }
         window.history.scrollRestoration = 'manual'
     </script>
@@ -45,9 +47,9 @@
             <a href="https://t.me/ijimiji"><b>@ijimiji</b></a>
         </div>
     </div>
-    <div onclick="scrollToBottom()">
+    <div>
         <details class="block" style="border-color: var(--red); background-color: var(--grey);">
-            <summary>
+            <summary id="about" onclick="scrollToBottom(this.id)">
                 <span class="icon">🙃</span>
                 About me
             </summary>
@@ -93,7 +95,7 @@
             </div>
         </details>
         <details class="block" style="border-color: var(--yellow); background-color: var(--grey);">
-            <summary>
+            <summary id="skills" onclick="scrollToBottom(this.id)">
                 <span class="icon">🔨</span>
                 Technical skills
             </summary>
@@ -160,7 +162,7 @@
             </div>
         </details>
         <details class="block" style="border-color: var(--blue); background-color: var(--grey);">
-            <summary>
+            <summary id="experience" onclick="scrollToBottom(this.id)">
                 <span class="icon">🚣</span>
                 Experience
             </summary>
@@ -183,7 +185,7 @@
                     <ul>
                         <li>
                             <div class="highlight">EPAM Python</div> course which had been followed with writting RSS
-                            client with a <div class="highlight">Svelte</div> client.
+                            client with a <div class="highlight">Svelte</div> frontend.
                         </li>
                     </ul>
                 </details>

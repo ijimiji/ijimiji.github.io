@@ -24,6 +24,7 @@ body {
     background-color: var(--black);
     padding: 0px;
     margin: 0px;
+    font-size: calc(100% + 1vw + 1vh);
 }
 
 .red-bg {
@@ -126,7 +127,6 @@ a:hover {
 }
 
 .vert {
-    font-size: xx-small;
     display: flex;
     flex-direction: column;
 }
@@ -141,11 +141,11 @@ a:hover {
 }
 
 .major-title {
-    font-size: large;
+    /* font-size: large; */
 }
 
 .minor-title {
-    font-size: medium;
+    /* font-size: medium; */
 }
 
 .highlight {
@@ -154,7 +154,6 @@ a:hover {
 }
 
 .footer {
-    font-size: xx-small;
     position: fixed;
     bottom: 0;
 }
@@ -172,7 +171,6 @@ p {
 }
 
 ul {
-    font-size: small;
     margin: 0px;
     padding-left: 1em;
 }
