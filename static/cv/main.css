@@ -24,7 +24,6 @@ body {
     background-color: var(--black);
     padding: 0px;
     margin: 0px;
-    font-size: calc(100% + 1vw + 1vh);
 }
 
 @media (max-width: 767px) {
